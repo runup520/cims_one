@@ -47,12 +47,17 @@ class ArticlesController < ApplicationController
 	    @javas = Article.where("tag = 'java学习'")
 	    @rubys = Article.where("tag = 'ruby学习'")
 	    @datas = Article.where("tag = '数据结构'")
+
+	    #cims
+	    @jobs = Article.where("tag = '就业信息'")
+
 	    @articles = Article.page(params[:page]).per(4)	
 		@article = Article.find(params[:id])
 		@user = User.find(@article.user_id)
         
         @article = Article.find(params[:id])
 		@comment = @article.comments.find_by_id(params[:id])
+
 	end
 
 

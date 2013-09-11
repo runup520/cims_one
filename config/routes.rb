@@ -46,6 +46,9 @@ match '/data',  to: 'static_pages#data'
 
 match '/searchresult',  to: 'static_pages#searchresult'
 
+#cims
+match '/job',  to: 'static_pages#job'
+
 
 
 

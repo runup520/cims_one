@@ -1,0 +1,9 @@
+<section>
+
+<ul>
+	<%@jobs.each do |job|%>
+		<li><%=link_to job.title,article_path(job)%>
+		</li>
+	<%end%>
+</ul>
+</section>
